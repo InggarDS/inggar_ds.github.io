@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Cabin+Sketch|Just+Another+Hand|Lemonada|Mako|Oswald|Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    overflow: hidden;
+}
+
+#opening{
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+}
+
+#type-input{
+    border: none;
+    padding: 0%;
+    font-size: 30PX;
+    color: white;
+    height: 50px;
+    font-family: 'Overpass';
+    text-align: center;   
+    background-color: transparent;
+}
+
+#type-input:focus {
+   
+    outline: none;
+   
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    padding: 5px;
+    
+}
+
+
+#start-game{
+    height: 100vw;
+    width: 100vw;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#track-line{
+    background-color:black;
+    transition: ease-out 0.5s;
+    cursor: url('img/kursor3.png'),auto;
+    border:1px solid gray;
+}
+
+
+
+
+
+#random-quote{
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 300px;
+    background-color: black;
+    font-family:'Merriweather';
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-style: italic;
+    /* transition: all 1s; */
+    animation: random-quote 2s ease-in;
+    -moz-animation: random-quote 2s ease-in;
+    -webkit-animation: random-quote 2s ease-in;
+}
+
+
+#random-quote p{
+    color:white;
+    text-align: right;
+    padding-right: 50px;
+    text-emphasis-style: inherit;
+    font-size: 14px;
+    
+}
+
+
+
+
+#game-title{
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+ .title-glowing{
+    font-family: neon;
+    color:white;
+    font-size: 70px;
+    line-height:80px;
+    text-shadow: 0 0 2vw grey;
+    text-align: center;
+    
+}
+
+.title-glowing{
+    animation: title-glowing 1s ease infinite;
+    -moz-animation: title-glowing 1s ease infinite;
+    -webkit-animation: title-glowing 1s ease infinite;
+}
+
+
+
+#game-start{
+
+    display: flex;
+    justify-content: center;
+}
+
+
+#game-start h4 a{
+    font-size: 40px;
+    color:gray;
+    transition: all 0.5s;
+    font-family: 'Overpass';
+    opacity: 0;
+    text-decoration: none;
+}
+
+
+#game-start h4 a:hover{
+    color:white;
+    opacity: 100%;
+    text-shadow:0 0 1vw #b3b3b3, 0 0 3vw #b3b3b3;
+    cursor: pointer;
+   
+}
+
+
+
+@-webkit-keyframes title-glowing {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #b3b3b3, 0 0 3vw #b3b3b3, 0 0 10vw #b3b3b3, 0 0 10vw #b3b3b3, 0 0 .4vw #b3b3b3, .5vw .5vw .1vw #b3b3b3;
+      color:white;
+    }
+   70% {
+      text-shadow: 0 0 .5vw grey, 0 0 1.5vw grey, 0 0 5vw grey, 0 0 5vw grey, 0 0 .2vw grey, .5vw .5vw .1vw grey;
+      color: whitesmoke;
+    }
+
+}
+
+
+
+@keyframes random-quote{
+    0% {
+        opacity:0
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+
+/* game rule */
+/* place name */
+#name-place{
+
+    animation: name-place 1s ease infinite;
+    -moz-animation: name-place 1s ease infinite;
+    -webkit-animation: name-place 1s ease infinite;
+
+}
+
+#name-place{
+    background-color: black;
+    font-family: neon;
+    color:#426DFB;
+    font-size: 40px;
+    text-shadow: 0 0 2vw#2356FF;
+    text-align: center;
+    opacity: 100%;
+    margin-top: -30px;
+    height: 125px;
+    width: 75%;
+    z-index: 10;
+    position: absolute;
+    
+}
+
+
+@-webkit-keyframes name-place {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: #28D7FE;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #146C80;
+    }
+
+}
+

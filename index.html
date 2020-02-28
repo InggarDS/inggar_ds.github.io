@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Follow Your Dream</title>
+    </head>
+    <body>
+        <div id = "opening">
+            <div id = "random-quote"></div>
+            <div id = "game-title"><h1 class = "title-glowing">FOLLOW YOUR <br> DREAM !</h1></div>
+            <div id = "input-dream">
+              <form action="#">
+                <input id = "type-input" type="text" placeholder="What's your dream ?" autocomplete="off" oninput="cekInput()">
+            </form>
+        </div>
+            <div id = "game-start"><h4><a id="start-btn"  href="#start-game"> Let's go</a></h4></div>    
+        </div>
+        
+        <div id = "start-game">
+            <div id = "name-place"><h2>DREAM</h2></div>
+            <canvas id = "track-line" height="800" width="100">
+                <!-- <div id = "dot"></div> -->
+            </canvas> 
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
+
+<!-- hitung kata -->
+
+<script>
+    function cekInput() {
+      var x = document.getElementById("type-input").value;
+
+      if(x.length >= 5){
+         document.getElementById('start-btn').style.opacity = 100
+      }else{
+        document.getElementById('start-btn').style.opacity = 0
+      }
+        
+      
+    }
+    </script>
